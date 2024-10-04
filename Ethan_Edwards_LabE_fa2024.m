@@ -6,13 +6,15 @@
 % Lab E
 clear; clc; close all;
 %% Problem 1
-determineCommonFactors(30,90);
+determineCommonFactors(30,90); % guided lab
 
 %% Problem 2
+
+%set input for function
 x = 10;
 y = 25;
 
-total = calculateSum(x, y);
+total = calculateSum(x, y); %use function to get sum
 
 % D.
 
@@ -28,17 +30,17 @@ total = calculateSum(x, y);
 % through to the function. 
 
 %% Problem 3
-valid = false; % set logic to false
+valid = false; % set logic to false initially
 while valid == false %check logic
-    num1 = input('Enter first number: '); %ask user for inpts
+    num1 = input('Enter first number: '); %ask user for inputs
     num2 = input('Enter second number: ');
     
-    valid = validateInput(num1, num2); %use function to validate user input
+    valid = validateInput(num1, num2); %use function validate  input
     
     if valid == false
-        disp('Invalid inputs. Please enter two positive numbers.'); % response if conditions are not met
+        disp('Invalid inputs. Please enter two positive numbers.'); % if still false
     else
-        disp('Success! The inputs are valid.'); % if valid is true, diplay success
+        disp('Success! The inputs are valid.'); % check if valid
     end
 end
 
@@ -50,9 +52,9 @@ maxF = input('Enter the maximum temperature in Fahrenheit: '); % Ask user for in
 % Call the function to get the Celsius values
 c = convertFtoCTemps(minF, maxF); 
 
-% Print the conversion table
+% table
 fprintf('Fahrenheit\tCelsius\n'); % Print table header
-for f = minF:maxF
+for f = minF:maxF %print table data
     fprintf('%d\t\t%.2f\n', f, c(f - minF + 1)); % Print each Fahrenheit and its Celsius equivalent
 end
 
